@@ -1,60 +1,16 @@
-:root {
-    --color-primary-dark: #31261A;
-    --color-primary-light: #FAF4EA;
-    --color-secondary-dark: #A18268;
-    --color-brand-normal: #819B57;
-    --color-brand-dark: #465929;
-    --color-brand-light: #CFCFBC;
-
-}
-
-
-/* Base */
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
+@import "./utils/variables";
+@import "./base";
+@import "./utils/utils";
+@import "./components/buttons";
+@import "./components/links";
+@import "./components/header";
+@import "./components/hero-section";
+@import "./utils/mixins";
 
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-a {
-    display: inline-block;
-}
 
-body {
-    color: var(--color-primary-dark);
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    background-color: var(--color-primary-light);
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin-top: 0;
-}
-
-.visually-hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
 
 .section {
     padding: 48px 0;
@@ -73,34 +29,9 @@ address {
 }
 
 /* Button */
-.button {
-    background-color: var(--color-brand-normal);
-    color: var(--color-primary-light);
-    border: 2px solid var(--color-brand-normal);
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 16px 32px;
-}
-
-.button:hover {
-    background-color: transparent;
-    color: var(--color-brand-dark);
-}
 
 /* Link */
-.link {
-    color: var(--color-primary-light);
-    line-height: 1.5;
-    text-decoration: none;
-    transition: color .3s;
-}
 
-.link:hover {
-    color: var(--color-brand-normal);
-
-    text-decoration: none;
-}
 
 .section-title {
     font-weight: 900;
@@ -116,58 +47,7 @@ address {
     color: var(--color-brand-dark);
 }
 
-/* Header */
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
 
-.header-nav {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-.header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 32px;
-}
-
-/* Hero-section */
-.hero-section {
-    padding: 272px 0;
-    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url(../images/hero-section-background.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    /* background: url(../images/couple-in-bakery.jpg) no-repeat center/top cover; */
-}
-
-
-
-.hero-title {
-    color: var(--color-primary-light);
-    text-align: center;
-    font-size: 128px;
-    font-weight: 900;
-    margin-bottom: 0;
-}
-
-.hero-title .accent {
-    color: var(--color-brand-normal);
-}
 
 /* Advantages section */
 .advantages-list {
@@ -289,14 +169,24 @@ address {
 
 .format-card {
     border-radius: 16px;
+    position: relative;
     height: 444px;
-    border: 1px solid lightcoral;
-    /*remove */
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+  
     padding: 24px;
     transition: transform 0.3s;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
 }
-
+.format-image {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+  z-index: -1;
+    
+}
 .format-card:hover {
     transform: scale(1.05);
 }
@@ -327,11 +217,14 @@ address {
 .format-title {
     font-size: 24px;
     font-weight: 600;
+    color: var(--color-primary-light);
 }
 
 .format-text {
     font-size: 14px;
     font-weight: 300;
+        color: var(--color-primary-light);
+    
 }
 
 
@@ -537,7 +430,7 @@ address {
     border-radius: 8px;
     background-color: transparent;
     font-size: 16px;
-        line-height: 1.17;
+    line-height: 1.17;
 
 }
 
@@ -553,7 +446,7 @@ address {
 
 .form-input::placeholder {
     color: var(--color-secondary-dark);
-  
+
 }
 
 .form-input:focus::placeholder {
