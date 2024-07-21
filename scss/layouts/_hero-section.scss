@@ -5,18 +5,14 @@
     background-position: center top;
     background-size: cover;
     /* background: url(../images/couple-in-bakery.jpg) no-repeat center/top cover; */
+
+    &__title {
+            color: var(--color-primary-light);
+            text-align: center;
+            font-size: 128px;
+            font-weight: 900;
+            margin-bottom: 0;
+        }
 }
 
 
-
-.hero-title {
-    color: var(--color-primary-light);
-    text-align: center;
-    font-size: 128px;
-    font-weight: 900;
-    margin-bottom: 0;
-}
-
-.hero-title .accent {
-    color: var(--color-brand-normal);
-}

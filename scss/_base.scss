@@ -34,3 +34,42 @@ h6,
 p {
     margin-top: 0;
 }
+
+address {
+    font-style: normal;
+
+}
+.adress-list,
+.adress-info {
+    flex-grow: 1;
+}
+
+.address-link {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-primary-light);
+}
+
+.address-link:hover {
+
+    color: var(--color-brand-normal);
+}
+
+.address-copyright {
+    font-size: 14px;
+    color: #A18268;
+}
+
+.adress-icon {
+    fill: var(--color-primary-light);
+}
+
+.adress-icon:hover {
+    fill: var(--color-brand-normal);
+} 
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1288px;
+    padding: 0 24px;
+}
