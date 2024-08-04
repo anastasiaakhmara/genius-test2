@@ -5,7 +5,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 32px;
+    padding-top: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+            padding-top: 32px;
+        }
 
     &__nav {
             flex-grow: 1;
@@ -16,10 +20,37 @@
     
     
         &__menu {
-            display: flex;
-            gap: 64px;
-            flex-grow: 1;
-            justify-content: center;
+           
+            display: none;
+
+            @media screen and (min-width: $bp-desktop) {
+                display: flex;
+                    gap: 64px;
+                    flex-grow: 1;
+                    justify-content: center;
+            }
+        }
+
+        &__button {
+            display: none;
+            @media screen and (min-width: $bp-desktop) {
+                    display: block;
+                }
+        }
+
+        &__burger {
+
+            display: block;
+            background-color: transparent;
+            border: none;
+            width: 24px;
+            height: 24px;
+            padding: 0;
+
+
+            @media screen and (min-width: $bp-desktop) {
+                    display: none;
+                }
         }
 
         &__container {

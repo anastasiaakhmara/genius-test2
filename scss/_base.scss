@@ -18,12 +18,25 @@ a {
 body {
     color: var(--color-primary-dark);
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 1.5;
     margin: 0;
     background-color: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-tablet) {
+            font-weight: 400;
+            font-size: 18px;
+        }
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 h1,
 h2,

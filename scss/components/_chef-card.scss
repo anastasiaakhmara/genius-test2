@@ -2,16 +2,28 @@
 
 .chef-card {
     display: flex;
-    gap: 30px;
-
+    align-items: flex-start;
+    gap: 16px;
+@media screen and (min-width: $bp-desktop) {
+        gap: 30px;
+    }
     &__photo {
+        width: 140px;
+
+        @media screen and (min-width: $bp-desktop) {
+                width: 240px;
+            }
+
             border-radius: 4px 4px 4px 200px;
             box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
         }
     
         &__text  {
             margin-bottom: 24px;
-
+            font-size: 14px;
+            @media screen and (min-width: $bp-tablet) {
+                    font-size: 18px;
+                }
             &:last-child {
                     margin-bottom: 0;
                 }
@@ -20,8 +32,12 @@
        
 
                 &__title {
-                    font-size: 40px;
+                    font-size: 24px;
                     font-weight: 600;
                     margin-bottom: 16px;
+
+                    @media screen and (min-width: $bp-tablet) {
+                            font-size: 40px;
+                        }
                 }
 }
