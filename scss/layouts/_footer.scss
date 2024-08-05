@@ -6,52 +6,113 @@
     background-position: center;
     padding: 32px 0;
     position: relative;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+        text-align: left;
+        }
+
+    &::before {
+            content: '';
+            background-image: url(../images/decor-bread-small.png);
+            position: absolute;
+            width: 180px;
+            height: 120px;
+            background-repeat: no-repeat;
+            bottom: 0;
+            left: 0;
+        }
+    
+        &::after {
+            content: '';
+            background-image: url(../images/decor-bread-large.png);
+            position: absolute;
+            width: 380px;
+            height: 190px;
+            bottom: 0;
+            right: 0;
+            background-repeat: no-repeat;
+    
+        }
+                &__container {
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+                    @media screen and (min-width: $bp-tablet) {
+                            
+                            flex-direction: row;
+                        }
+        
+                }
+        
+                &__nav {
+                    
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+                    @media screen and (min-width: $bp-tablet) {
+                            flex-basis: 50%;
+                            flex-direction: row;
+                        }
+                }
+        
+                &__adress {
+                    
+                    display: flex;
+                    gap: 20px;
+                    flex-direction: column;
+                    @media screen and (min-width: $bp-tablet) {
+                            flex-basis: 50%;
+                            flex-direction: row;
+                        }
+                }
+        
+                &__logo {
+                    flex-grow: 1;
+                }
+        
+                &__menu {
+                    flex-grow: 1;
+                }
+                                &__adress-list,
+                                &__adress-info {
+                                    flex-grow: 1;
+                                }
+                
+                                &__address-link {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    color: var(--color-primary-light);
+                                }
+                
+                                &__address-link:hover {
+                
+                                    color: var(--color-brand-normal);
+                                }
+                
+                                &__address-copyright {
+                                    font-size: 14px;
+                                    color: #A18268;
+                                }
+                
+                                &__adress-icon {
+                                    fill: var(--color-primary-light);
+                                }
+                
+                                &__adress-icon:hover {
+                                    fill: var(--color-brand-normal);
+                                }
 }
 
-.footer::before {
-    content: '';
-    background-image: url(../images/decor-bread-small.png);
-    position: absolute;
-    width: 180px;
-    height: 120px;
-    background-repeat: no-repeat;
-    bottom: 0;
-}
 
-.footer::after {
-    content: '';
-    background-image: url(../images/decor-bread-large.png);
-    position: absolute;
-    width: 380px;
-    height: 190px;
-    bottom: 0;
-    right: 0;
-    background-repeat: no-repeat;
+address {
+    font-style: normal;
 
 }
 
-.footer-container {
-    display: flex;
-    gap: 20px;
 
-}
 
-.footer-nav {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
 
-.footer-adress {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
 
-.footer-logo {
-    flex-grow: 1;
-}
 
-.footer-menu {
-    flex-grow: 1;
-}
+
